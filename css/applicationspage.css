@@ -1,0 +1,56 @@
+.avatar {
+    position: relative; 
+    top: 10px;
+    left: 20%;   
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.applications {
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.applications th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #1e2b37;
+    color: white;
+}
+
+.applications tr {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+}
+
+.applications th:hover, .applications tr:hover {
+    background-color: #ddd;
+}
+
+.profilepic {
+    position: relative;
+    align-content: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.appscol {
+    float: left;
+    width: 33%;
+    padding: 10px;
+    height: 250px;
+}
+
+.applications a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
