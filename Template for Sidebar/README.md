@@ -1,4 +1,4 @@
-#Note: 
+# Note: 
 - Inside this folder contains the general theme for the site.
 - I wasn't able to figure out how to have one file for sidebar and top navigation bar
 so we'll need to copy and paste the template and add our design.
@@ -9,4 +9,4 @@ so we'll need to copy and paste the template and add our design.
 
 ### Misc:
 - If you have an easier way, just let everyone know.
-- Let me know if you want me to clarify things.
+- Also, let me know if you want me to clarify things.
