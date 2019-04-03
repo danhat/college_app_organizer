@@ -8,9 +8,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <!-- Custom styles for this template -->
+    <!-- Custom styles for this page -->
     <link href="./css/calendar.css" rel="stylesheet">
     
+    <!-- Full Calendar Styles-->
+    <link href='./packages/fullcalendar-4.0.1/core/main.css' rel='stylesheet' />
+    <link href='./packages/fullcalendar-4.0.1/daygrid/main.css' rel='stylesheet' />
+    <link href='./packages/fullcalendar-4.0.1/list/main.css' rel='stylesheet' />
+
     <title>College Organizer</title>
   </head>
 
@@ -33,7 +38,7 @@
           <div class="sidebar-sticky">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="index.html">
                   <span data-feather="home"></span>
                   Home
                 </a>
@@ -83,16 +88,180 @@
               </div>
             </div>
           </div>
+          <div class="row">
+            <div class="col-md-4">
+              <h3>Upcoming Events</h3>
+              <div id='calendarList'></div>
+            </div>
+            <div class="col-md-8" id='calendarFrame'></div>
+          </div>
         </main>
       </div>
     </div>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
+    <!-- Bootstrap core JavaScript -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+    <!-- Full Calendar JavaScript-->
+    <script src='./packages/fullcalendar-4.0.1/core/main.js'></script>
+    <script src='./packages/fullcalendar-4.0.1/interaction/main.js'></script>
+    <script src='./packages/fullcalendar-4.0.1/daygrid/main.js'></script>
+    <script src='./packages/fullcalendar-4.0.1/list/main.js'></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendarFrame');
+        var calendarEl2 = document.getElementById('calendarList');
+        
+        // Calendar Frame with default events
+        var calendarFrame = new FullCalendar.Calendar(calendarEl, {
+          plugins: [ 'interaction', 'dayGrid' ],
+          customButtons: {
+            add_event: {
+              text: 'add event',
+              click: function() {
+                alert('To Be Implemented!');
+              }
+            },
+            add_reminder: {
+              text: 'add reminder',
+              click: function() {
+                alert('To Be Implemented!');
+              }
+            }
+          },
+          header: {
+            left: 'prevYear,prev,next,nextYear today',
+            center: 'title',
+            right: 'add_event add_reminder'
+          },
+          defaultDate: '2019-03-12',
+          contentHeight: "auto",
+          editable: true,
+          eventLimit: true, // allow "more" link when too many events
+          events: [
+            {
+              title: 'All Day Event',
+              start: '2019-03-01'
+            },
+            {
+              title: 'Long Event',
+              start: '2019-03-07',
+              end: '2019-03-10'
+            },
+            {
+              groupId: 999,
+              title: 'Repeating Event',
+              start: '2019-03-09T16:00:00'
+            },
+            {
+              groupId: 999,
+              title: 'Repeating Event',
+              start: '2019-03-16T16:00:00'
+            },
+            {
+              title: 'Conference',
+              start: '2019-03-11',
+              end: '2019-03-13'
+            },
+            {
+              title: 'Meeting',
+              start: '2019-03-12T10:30:00',
+              end: '2019-03-12T12:30:00'
+            },
+            {
+              title: 'Lunch',
+              start: '2019-03-12T12:00:00'
+            },
+            {
+              title: 'Meeting',
+              start: '2019-03-12T14:30:00'
+            },
+            {
+              title: 'Happy Hour',
+              start: '2019-03-12T17:30:00'
+            },
+            {
+              title: 'Dinner',
+              start: '2019-03-12T20:00:00'
+            },
+            {
+              title: 'Birthday Party',
+              start: '2019-03-13T07:00:00'
+            }
+          ]
+        });
+
+        // Calendar List with default events
+        var calendarList = new FullCalendar.Calendar(calendarEl2, {
+          plugins: [ 'list' ],
+          header: "false",
+          defaultView: 'listWeek',
+          defaultDate: '2019-03-12',
+          contentHeight: "auto",
+          editable: true,
+          eventLimit: true, // allow "more" link when too many events
+          events: [
+            {
+              title: 'All Day Event',
+              start: '2019-03-01'
+            },
+            {
+              title: 'Long Event',
+              start: '2019-03-07',
+              end: '2019-03-10'
+            },
+            {
+              groupId: 999,
+              title: 'Repeating Event',
+              start: '2019-03-09T16:00:00'
+            },
+            {
+              groupId: 999,
+              title: 'Repeating Event',
+              start: '2019-03-16T16:00:00'
+            },
+            {
+              title: 'Conference',
+              start: '2019-03-11',
+              end: '2019-03-13'
+            },
+            {
+              title: 'Meeting',
+              start: '2019-03-12T10:30:00',
+              end: '2019-03-12T12:30:00'
+            },
+            {
+              title: 'Lunch',
+              start: '2019-03-12T12:00:00'
+            },
+            {
+              title: 'Meeting',
+              start: '2019-03-12T14:30:00'
+            },
+            {
+              title: 'Happy Hour',
+              start: '2019-03-12T17:30:00'
+            },
+            {
+              title: 'Dinner',
+              start: '2019-03-12T20:00:00'
+            },
+            {
+              title: 'Birthday Party',
+              start: '2019-03-13T07:00:00'
+            }
+          ]
+        });
+
+        // render calendars
+        calendarFrame.render();
+        calendarList.render();
+      });
+    </script>
+
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
     <script>
