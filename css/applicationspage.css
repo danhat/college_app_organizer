@@ -53,4 +53,15 @@
     color: inherit;
 }
 
+.editing_area {
+    border: 1px solid black;
+    height: 60%;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    width: 53%;
+}
 
