@@ -59,9 +59,43 @@
     width: 100%;
     margin-top: 15px;
     margin-bottom: 15px;
+    padding: 15px;
+}
+
+.container {
+    padding: 9px;
+}
+
+.progress {
+    height: 30px;
 }
 
 .progress-bar {
     width: 53%;
 }
 
+.reqs_list {
+    width: 50%;
+    border-collapse: separate;
+    border-spacing: 2em;
+}
+
+.reqs_list td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 10px;
+}
+
+/*.reqs_list tr {
+    padding-bottom: 15px;
+}*/
+
+.reqs_list td:hover {
+    background-color: #ddd;
+}
+
+
+/*.reqs_list a {
+    text-decoration: none;
+    color: inherit;
+}*/
