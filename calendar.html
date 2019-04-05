@@ -88,8 +88,15 @@
             <h1 class="h2">Calendar</h1>
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
-                <button class="btn btn-sm btn-outline-secondary">Share</button>
-                <button class="btn btn-sm btn-outline-secondary">Export</button>
+                <button class="btn btn-sm btn-outline-secondary" id="shareBtn">Share</button>
+                <script>
+                  $(document).ready(function() {
+                    $("#share-btn").click(function(){
+                      alert("button");
+                    }); 
+                  });
+                </script>
+                <button class="btn btn-sm btn-outline-secondary" id="exportBtn">Export</button>
               </div>
             </div>
           </div>
@@ -116,6 +123,20 @@
     <script src='./packages/fullcalendar-4.0.1/daygrid/main.js'></script>
     <script src='./packages/fullcalendar-4.0.1/list/main.js'></script>
     <script>
+      // button alerts
+      $(document).ready(function() {
+        $("#shareBtn").click(function(){
+          alert("To Be Implemented!");
+        }); 
+      });
+
+      $(document).ready(function() {
+        $("#exportBtn").click(function(){
+          alert("To Be Implemented!");
+        }); 
+      });
+      
+      // calendar creation
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendarFrame');
         var calendarEl2 = document.getElementById('calendarList');
