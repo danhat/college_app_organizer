@@ -12,6 +12,8 @@
     <link href="./css/navigation.css" rel="stylesheet">
     <link href="./css/applicationspage.css" rel="stylesheet">
 
+    <script src="./js/applications_page.js"></script>
+
     <title>College Organizer</title>
   </head>
 
@@ -84,112 +86,60 @@
             <h1 class="h2">Applications</h1>
           </div>
 
-          <div class="appsrow">
-            <div class="appscol">
-              <table class="applications" id="uic">
-                <tr>
-                  <th><a href="uic_app.html">University of Illinois at Chicago</a></th> 
-                </tr>
-                <tr>
-                  <td><a href="https://www.uic.edu/" target="_blank">Official Website</a></td>
-                </tr>
-                <tr>
-                  <td><a href="appl_requirements.html">Application Requirements</a></td>
-                </tr>
-                <tr>
-                  <td>Application Progress</td>
-                </tr>
-                <tr>
-                  <td><a href="uic_app.html">Edit Application</a></td>
-                </tr>
-                <tr>
-                  <td>Statistics</td>
-                </tr>
-                <tr>
-                  <td>Save College</td>
-                </tr>
-              </table>
-            </div> <!--end columm-->
 
-            <div class="appscol">
-              <table class="applications" id="uc">
-                <tr>
-                  <th>University of Chicago</th> 
-                </tr>
-                <tr>
-                  <td><a href="https://www.uchicago.edu/" target="_blank">Official Website</a></td>
-                </tr>
-                <tr>
-                  <td>Application Requirements</td>
-                </tr>
-                <tr>
-                  <td>Application Progress</td>
-                </tr>
-                <tr>
-                  <td>Edit Application</td>
-                </tr>
-                <tr>
-                  <td>Statistics</td>
-                </tr>
-                <tr>
-                  <td>Save College</td>
-                </tr>
-              </table>
-            </div> <!--end columm-->
+              
+          <div class="dropdown">
+            <button onclick="uicdropdownfunc()" class="dropbtn">University of Illinois at Chicago</button>
+            <div id="uicdropdown" class="dropdown-content">
+              <a href="https://www.uic.edu/" target="_blank">Official Website</a>
+              <a href="appl_requirements.html">Application Requirements</a>
+              <a href="#">Application Progress</a>
+              <a href="uic_app.html">Edit Application</a>
+              <a href="#">Statistics</a>
+              <a href="#">Fee Info</a>
+              <a href="#">Save College</a>
+            </div>
+          </div>
 
-            <div class="appscol">
-              <table class="applications" id="howard">
-                <tr>
-                  <th>Howard University</th> 
-                </tr>
-                <tr>
-                  <td><a href="https://home.howard.edu/" target="_blank">Official Website</a></td>
-                </tr>
-                <tr>
-                  <td>Application Requirements</td>
-                </tr>
-                <tr>
-                  <td>Application Progress</td>
-                </tr>
-                <tr>
-                  <td>Edit Application</td>
-                </tr>
-                <tr>
-                  <td>Statistics</td>
-                </tr>
-                <tr>
-                  <td>Save College</td>
-                </tr>
-              </table>
-            </div> <!--end columm-->
+          <div class="dropdown">
+            <button onclick="ucdropdownfunc()" class="dropbtn">University of Chicago</button>
+            <div id="ucdropdown" class="dropdown-content">
+              <a href="https://www.uchicago.edu/" target="_blank">Official Website</a>
+              <a href="appl_requirements.html">Application Requirements</a>
+              <a href="#">Application Progress</a>
+              <a href="#">Edit Application</a>
+              <a href="#">Statistics</a>
+              <a href="#">Fee Info</a>
+              <a href="#">Save College</a>
+            </div>
+          </div>
 
-            <div class="appscol">
-              <table class="applications" id="nw">
-                <tr>
-                  <th>Northwestern University</th> 
-                </tr>
-                <tr>
-                  <td><a href="https://www.northwestern.edu/" target="_blank">Official Website</a></td>
-                </tr>
-                <tr>
-                  <td>Application Requirements</td>
-                </tr>
-                <tr>
-                  <td>Application Progress</td>
-                </tr>
-                <tr>
-                  <td>Edit Application</td>
-                </tr>
-                <tr>
-                  <td>Statistics</td>
-                </tr>
-                <tr>
-                  <td>Save College</td>
-                </tr>
-              </table>
-            </div> <!--end columm-->
+          <div class="dropdown">
+            <button onclick="hudropdownfunc()" class="dropbtn">Howard University</button>
+            <div id="hudropdown" class="dropdown-content">
+              <a href=="https://home.howard.edu/" target="_blank">Official Website</a>
+              <a href="appl_requirements.html">Application Requirements</a>
+              <a href="#">Application Progress</a>
+              <a href="#">Edit Application</a>
+              <a href="#">Statistics</a>
+              <a href="#">Fee Info</a>
+              <a href="#">Save College</a>
+            </div>
+          </div>
 
-          </div> <!--end row-->
+          <div class="dropdown">
+            <button onclick="nudropdownfunc()" class="dropbtn">Northwestern University</button>
+            <div id="nudropdown" class="dropdown-content">
+              <a href="https://www.northwestern.edu/" target="_blank">Official Website</a>
+              <a href="appl_requirements.html">Application Requirements</a>
+              <a href="#">Application Progress</a>
+              <a href="#">Edit Application</a>
+              <a href="#">Statistics</a>
+              <a href="#">Fee Info</a>
+              <a href="#">Save College</a>
+            </div>
+          </div>
+
 
           
 

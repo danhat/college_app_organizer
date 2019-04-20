@@ -37,6 +37,7 @@
     align-content: center;
 }
 
+
 * {
   box-sizing: border-box;
 }
@@ -75,15 +76,15 @@
 }
 
 .reqs_list {
-    width: 50%;
+    width: 30%;
     border-collapse: separate;
-    border-spacing: 2em;
+    border-spacing: 1.3em;
 }
 
 .reqs_list td {
     border: 1px solid #ddd;
     text-align: left;
-    padding: 10px;
+    padding: 5px;
 }
 
 /*.reqs_list tr {
@@ -99,3 +100,102 @@
     text-decoration: none;
     color: inherit;
 }*/
+
+
+.dropbtn {
+    background-color: #1e2b37;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #555d6e;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 30px 30px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: #eee;
+}
+
+ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+}
+
+ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+ul.breadcrumb li a {
+    color: #0275d7;
+    text-decoration: none;
+}
+
+ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #bbb;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+
+
+
