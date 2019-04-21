@@ -7,7 +7,7 @@
 .card{
 	height: 500px;
 	border-radius: 15px;
-	background-color: rgba(0,0,0,0.4);
+	background-color: rgba(0,0,0,0.05);
 }
 .contacts_body{
 	padding:  0.75rem 0;
@@ -28,18 +28,9 @@
 .container{
 	align-content: center;
 }
-.search{
-	border-radius: 15px 0 0 15px;
-	background-color: rgba(0,0,0,0.3);
-	border:0;
-	color:white;
-}
-.search:focus{
-    box-shadow:none;
-    outline:0px;
-}
+
 .type_msg{
-	background-color: rgba(0,0,0,0.3);
+	background-color: rgba(0,0,0,0.2);
 	border:0;
 	color:white;
 	height: 60px;
@@ -79,8 +70,15 @@
 	padding: 5px 10px;
 	margin-bottom: 15px;
 }
+.contacts li .btn{
+	width: 100%;
+	padding: 5px 10px;
+	border: 1px solid rgba(0,0,0,0.2)
+}
+
 .active_contacts{
-	background-color: rgba(0,0,0,0.3);
+	background-color: rgba(0,0,0,0.2);
+	box-shadow: 1px 1px inset;
 }
 
 .user_info{
@@ -90,11 +88,11 @@
 }
 .user_info span{
 	font-size: 20px;
-	color: white;
+	color: black;
 }
 .user_info p{
 	font-size: 10px;
-	color: rgba(255,255,255,0.6);
+	color: red;
 }
 
 .msg_cotainer{
@@ -102,7 +100,8 @@
 	margin-bottom: auto;
 	margin-left: 10px;
 	border-radius: 25px;
-	background-color: #82ccdd;
+	background-color: #78e08f;
+	font-size: 16px;
 	padding: 10px;
 	position: relative;
 }
@@ -111,7 +110,8 @@
 	margin-bottom: auto;
 	margin-right: 10px;
 	border-radius: 25px;
-	background-color: #78e08f;
+	background-color: #82ccdd;
+	font-size: 16px;
 	padding: 10px;
 	position: relative;
 }
@@ -119,14 +119,14 @@
 	position: absolute;
 	left: 0;
 	bottom: -15px;
-	color: rgba(255,255,255,0.8);
+	color: rgba(0,0,0,0.8);
 	font-size: 10px;
 }
 .msg_time_send{
 	position: absolute;
 	right:0;
 	bottom: -15px;
-	color: rgba(255,255,255,0.8);
+	color: rgba(0,0,0,0.8);
 	font-size: 10px;
 }
 .msg_head{
@@ -136,7 +136,7 @@
 	position: absolute;
 	right: 10px;
 	top: 10px;
-	color: white;
+	color: black;
 	cursor: pointer;
 	font-size: 20px;
 }
@@ -144,11 +144,11 @@
 	z-index: 1;
 	position: absolute;
 	padding: 15px 0;
-	background-color: rgba(0,0,0,0.5);
+	background-color: silver;
 	color: white;
 	border-radius: 15px;
 	top: 30px;
-	right: 15px;
+	right: 30px;
 	display: none;
 }
 .action_menu ul{
@@ -160,6 +160,7 @@ margin: 0;
 	width: 100%;
 	padding: 10px 15px;
 	margin-bottom: 5px;
+	color: black;
 }
 .action_menu ul li i{
 	padding-right: 10px;
@@ -168,6 +169,8 @@ margin: 0;
 .action_menu ul li:hover{
 	cursor: pointer;
 	background-color: rgba(0,0,0,0.2);
+	text-decoration: underline;
+	color: white;
 }
 @media(max-width: 576px){
 	.contacts_card{
