@@ -7,16 +7,20 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
 
     <!-- Custom styles for this page -->
-    <!-- <link href="./css/calendar.css" rel="stylesheet"> -->
     <link href="./css/navigation.css" rel="stylesheet">
+    <link href="./css/eventForm.css" rel="stylesheet">
 
-    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+
     <!-- Full Calendar Styles-->
     <link href='./packages/fullcalendar-4.0.1/core/main.css' rel='stylesheet' />
     <link href='./packages/fullcalendar-4.0.1/daygrid/main.css' rel='stylesheet' />
     <link href='./packages/fullcalendar-4.0.1/list/main.css' rel='stylesheet' />
+
 
     <title>College Organizer</title>
   </head>
@@ -93,9 +97,9 @@
           <div class="d-flex justify-content-between align-items-center pb-2 mb-3 border-bottom">
             <ul class="breadcrumb">
               <li><a href="index.html">Home</a></li>
-              <li>Calendar</li>
+              <li><a href="calendar.html">Calendar</a></li>
+              <li>Add Form</li>
             </ul>
-
             <div class="btn-toolbar mb-2 mb-md-0">
               <div class="btn-group mr-2">
                 <button class="btn btn-sm btn-outline-secondary" id="shareBtn">Share</button>
@@ -112,11 +116,94 @@
           </div>
           <div class="row">
             <div class="col-md-4">
-              <h3>Upcoming Events</h3>
-              <div id='calendarList'></div>
+              <h3>Enter Details</h3>
+              <div class="bootstrap-iso">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="container marketing">
+                      <form method="post">
+                      <div class="form-group ">
+                      <label class="control-label " for="name">
+                      Event Title
+                      </label>
+                      <input class="form-control" id="name" name="name" placeholder="ACT Prep" type="text"/>
+                      </div>
+                      <div class="form-group ">
+                      <label class="control-label " for="date">
+                      Date
+                      </label>
+                      <div class="input-group">
+                      <div class="input-group-addon">
+                          <i class="fa fa-calendar">
+                          </i>
+                      </div>
+                      <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
+                      </div>
+                      </div>
+                      <div class="form-group ">
+                      <label class="control-label " for="time">
+                      Time
+                      </label>
+                      <div class="input-group">
+                      <div class="input-group-addon">
+                          <i class="fa fa-clock-o">
+                          </i>
+                      </div>
+                      <input class="form-control" id="time" name="time" placeholder="hh:mm" type="text"/>
+                      </div>
+                      </div>
+                      <div class="form-group ">
+                      <label class="control-label " for="location">
+                      Location
+                      </label>
+                      <div class="input-group">
+                      <div class="input-group-addon">
+                          <i class="fa fa-location-arrow">
+                          </i>
+                      </div>
+                      <input class="form-control" id="location" name="location" placeholder="UIC" type="text"/>
+                      </div>
+                      </div>
+                      <div class="form-group ">
+                      <label class="control-label " for="textarea">
+                      Notes
+                      </label>
+                      <textarea class="form-control" cols="40" id="textarea" name="textarea" placeholder="Add a note" rows="10"></textarea>
+                      </div>
+                      <div class="form-group ">
+                      <label class="control-label ">
+                      Check all that apply
+                      </label>
+                      <div class=" ">
+                      <div class="checkbox">
+                          <label class="checkbox">
+                          <input name="checkbox" type="checkbox" value="Email Notification"/>
+                          Email Notification
+                          </label>
+                      </div>
+                      <div class="checkbox">
+                          <label class="checkbox">
+                          <input name="checkbox" type="checkbox" value="Text Notification"/>
+                          Text Notification
+                          </label>
+                      </div>
+                      </div>
+                      </div>
+                      <div class="form-group">
+                      <div>
+                      <a class="btn btn-primary " href="calendar.html">
+                          Add
+                      </a>
+                      </div>
+                      </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <!-- Calendar Frame -->
+            
+            <!-- Calendar -->
             <div class="col-md-8" id='calendarFrame'></div>
           </div>
         </main>
@@ -226,65 +313,11 @@
           ]
         });
 
-        // Calendar List with default events
-        var calendarList = new FullCalendar.Calendar(calendarEl2, {
-          plugins: [ 'list' ],
-          header: "false",
-          defaultView: 'listMonth',
-          defaultDate: '2019-04-12',
-          contentHeight: "auto",
-          editable: true,
-          eventLimit: true, // allow "more" link when too many events
-          events: [
-            {
-              title: 'College Fair',
-              start: '2019-04-01'
-            },
-            {
-              title: 'Meet with Counselor Smith',
-              start: '2019-04-11T10:30:00',
-              end: '2019-04-11T12:30:00'
-            },
-            {
-              title: 'Lunch',
-              start: '2019-04-12T12:00:00'
-            },
-            {
-              title: 'Research Other Colleges',
-              start: '2019-04-13T14:30:00'
-            },
-            {
-              title: 'Work on UIC App',
-              start: '2019-04-12T17:30:00'
-            },
-            {
-              title: 'Email Counselor',
-              start: '2019-04-15T20:00:00'
-            },
-            {
-              title: 'ACT Prep',
-              start: '2019-04-13T07:00:00'
-            },
-            {
-              title: 'Transcript Deadline',
-              start: '2019-04-26T12:00:00'
-            },
-            {
-              title: 'Attend Presentation',
-              start: '2019-04-23T12:00:00'
-            },
-            {
-              title: 'UIC Application Deadline',
-              start: '2019-04-30T12:00:00'
-            }
-          ]
-        });
-
         // render calendars
         calendarFrame.render();
-        calendarList.render();
       });
     </script>
+
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
