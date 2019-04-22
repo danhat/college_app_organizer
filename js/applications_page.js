@@ -26,3 +26,42 @@ window.onclick = function(event) {
         }
     }
 }
+
+function appFormPopup() {
+    var popup = document.getElementById("appFormPop");
+    popup.classList.toggle("show");
+}
+
+function essayPopup() {
+    var popup = document.getElementById("essayPop");
+    popup.classList.toggle("show");
+}
+
+function transPopup() {
+    var popup = document.getElementById("transPop");
+    popup.classList.toggle("show");
+}
+
+function testPopup() {
+    var popup = document.getElementById("testPop");
+    popup.classList.toggle("show");
+}
+
+function actPopup() {
+    var popup = document.getElementById("actPop");
+    popup.classList.toggle("show");
+}
+
+function recPopup() {
+    var popup = document.getElementById("recPop");
+    popup.classList.toggle("show");
+}
+
+function feesPopup() {
+    var popup = document.getElementById("feesPop");
+    popup.classList.toggle("show");
+}
+
+
+
+

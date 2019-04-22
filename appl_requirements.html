@@ -12,6 +12,8 @@
     <link href="./css/navigation.css" rel="stylesheet">
     <link href="./css/applicationspage.css" rel="stylesheet">
 
+    <script src="js/applications_page.js"></script>
+
     <title>College Organizer</title>
   </head>
 
@@ -35,7 +37,7 @@
             <div class="profilepic">
               <img src="./images/uic_logo.png" class="avatar">
             </div>
-            <div class="sidebar-sticky">
+            <div class="sidebar-sticky">    
               <ul class="nav flex-column">
                 <li class="nav-item">
                   <a class="nav-link" href="index.html">
@@ -44,41 +46,41 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="https://www.uic.edu/" target="_blank">
-                    <span data-feather="edit-3"></span>
-                    Official Website
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link active" href="appl_requirements.html">
-                    <span data-feather="file-text"></span>
-                    Requirements
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="uic_app.html">
+                  <a class="nav-link active" href="applicationspage.html">
                     <span data-feather="file"></span>
-                    Edit Application
+                    Applications
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span data-feather="database"></span>
-                    Statistics
+                  <a class="nav-link" href="searchpage.html">
+                    <span data-feather="map"></span>
+                    Colleges 
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span data-feather="save"></span>
-                    Save College
+                  <a class="nav-link" href="calendar.html">
+                    <span data-feather="calendar"></span>
+                    Calendar
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">
-                    <span data-feather="clipboard"></span>
-                    Fee Waiver Info
+                  <a class="nav-link" href="contact.html">
+                    <span data-feather="message-circle"></span>
+                    Chat
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="resources.html">
+                    <span data-feather="layers"></span>
+                    Resources
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">
+                    <span data-feather="info"></span>
+                    About
+                  </a>
+                </li>            
               </ul>
             </div>
           </nav>
@@ -98,31 +100,66 @@
 
           <div class="reqrow">
             <div class="reqcol">
-              <div class="tooltip">Hover over me 
-                <span class="tooltiptext">More info</span>
-              </div>
               <table class="reqs_list" id="uic">
+
                 <tr>
-                  <td><h4>Application Form</h4></td> 
+                  <td><h4>
+                    <div class="popup" onclick="appFormPopup()">Application Form
+                      <span class="popuptext" id="appFormPop">Common application with basic contact information, etc.</span>
+                    </div>
+                  </h4></td> 
                 </tr>
+                
+
                 <tr>
-                  <td><h4>Essay</h4></td>
+                  <td><h4>
+                    <div class="popup" onclick="essayPopup()">Essay
+                      <span class="popuptext" id="essayPop">"Discuss an accomplishment or event that sparked a period of personal growth and a new understanding of yourself or others."</span>
+                    </div>
+                  </h4></td>
                 </tr>
+
                 <tr>
-                  <td><h4>Transcript</h4></td>
+                  <td><h4>
+                    <div class="popup" onclick="transPopup()">Transcript
+                      <span class="popuptext" id="transPop">The record of the classes you've taken and your grades.</span>
+                    </div>
+                  </h4></td>
                 </tr>
+
                 <tr>
-                  <td><h4>Test Scores</h4></td>
+                  <td><h4>
+                    <div class="popup" onclick="testPopup()">Test Scores
+                      <span class="popuptext" id="testPop">Scores from tests such as the SAT or ACT.</span>
+                    </div>
+                  </h4></td>
                 </tr>
+
                 <tr>
-                  <td><h4>Activites</h4></td>
+                  <td><h4>
+                    <div class="popup" onclick="actPopup()">Activities
+                      <span class="popuptext" id="actPop">Extra-curricular activities outside of the classroom.</span>
+                    </div>
+                  </h4></td>
                 </tr>
+
+
                 <tr>
-                  <td><h4>Recommendations</h4></td>
+                  <td><h4>
+                    <div class="popup" onclick="recPopup()">Recommendations
+                      <span class="popuptext" id="recPop">Letters of recommendation from teachers or other adults who know you well.</span>
+                    </div>
+                  </h4></td>
                 </tr>
+
                 <tr>
-                  <td><h4>Fees</h4></td>
+                  <td><h4>
+                    <div class="popup" onclick="feesPopup()">Fees
+                      <span class="popuptext" id="feesPop">$60 nonrefundable fee or fee waiver.</span>
+                    </div>
+                  </h4></td>
                 </tr>
+
               </table>
             </div> <!--end columm-->
 
