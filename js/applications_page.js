@@ -73,5 +73,71 @@ function changeMode() {
     }
 }
 
+function changeMode2() {
+    var but = document.getElementById("mode_button2");
+
+    if (but.innerHTML == "View Mode") {
+        but.innerHTML = "Edit Mode";
+    }
+    else {
+        but.innerHTML = "View Mode";
+    }
+}
+
+function changeMode3() {
+    var but = document.getElementById("mode_button3");
+
+    if (but.innerHTML == "View Mode") {
+        but.innerHTML = "Edit Mode";
+    }
+    else {
+        but.innerHTML = "View Mode";
+    }
+}
+
+function changeMode4() {
+    var but = document.getElementById("mode_button4");
+
+    if (but.innerHTML == "View Mode") {
+        but.innerHTML = "Edit Mode";
+    }
+    else {
+        but.innerHTML = "View Mode";
+    }
+}
+
+function changeMode5() {
+    var but = document.getElementById("mode_button5");
+
+    if (but.innerHTML == "View Mode") {
+        but.innerHTML = "Edit Mode";
+    }
+    else {
+        but.innerHTML = "View Mode";
+    }
+}
+
+function changeMode6() {
+    var but = document.getElementById("mode_button6");
+
+    if (but.innerHTML == "View Mode") {
+        but.innerHTML = "Edit Mode";
+    }
+    else {
+        but.innerHTML = "View Mode";
+    }
+}
+
+function changeMode7() {
+    var but = document.getElementById("mode_button7");
+
+    if (but.innerHTML == "View Mode") {
+        but.innerHTML = "Edit Mode";
+    }
+    else {
+        but.innerHTML = "View Mode";
+    }
+}
+
 
 
