@@ -62,6 +62,16 @@ function feesPopup() {
     popup.classList.toggle("show");
 }
 
+function changeMode() {
+    var but = document.getElementById("mode_button");
+
+    if (but.innerHTML == "View Mode") {
+        but.innerHTML = "Edit Mode";
+    }
+    else {
+        but.innerHTML = "View Mode";
+    }
+}
 
 
 
